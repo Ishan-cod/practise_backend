@@ -14,6 +14,10 @@ App created using express
 1. app.use() --> is used to handle middleware 
 
 
+# PART - 04
+Creating Models of users and videos according to datamodel made
+
+<h1>[MODELS LINK](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj?origin=share)</h1>
 
 
 
