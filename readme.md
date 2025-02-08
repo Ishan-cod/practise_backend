@@ -17,7 +17,34 @@ App created using express
 # PART - 04
 Creating Models of users and videos according to datamodel made
 
-<h1>[MODELS LINK](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj?origin=share)</h1>
+<div>[MODELS LINK](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj?origin=share)</div>
+
+{trim: true} → Removes any extra spaces from the beginning and end.
+
+ <h2>What is Schema.Types.ObjectId?</h2>
+
+Schema.Types.ObjectId is a special data type in Mongoose.
+
+It stores a MongoDB ObjectId (which is a unique identifier for a document in another collection).
+
+Instead of storing actual video data in the user document, it stores a reference (ID) of a video document
 
 
 
+1. Library required --> jsonwebtoken and bcrypt 
+
+
+
+
+
+
+# Uploading file to cloudinary server...
+
+1. We are uploading file to our local server then attenpt to upload to the cloudinary server
+2. This help in retry of file upload to cloudinary in case of any failure attempt
+
+
+# fs ??
+
+By default nodejs package...
+1. Used to open a file , change file settings
