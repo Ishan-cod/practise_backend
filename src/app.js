@@ -32,5 +32,14 @@ app.use(cookieParser());
 
 
 
+// Routes import
+import userRouter from './routes/user.routes.js';
+// Can give manchaha name when export is default
+
+
+//route declaration
+app.use("/api/v1/user", userRouter)
+
+// https://localhost:8000/api/v1/users/register
 
 export { app };

@@ -69,3 +69,9 @@ WHAT IS JWT ?
 JWT is a bearer token ... all those who has this token will have access to my database ... like a key
 
 </div>
+
+
+
+# PART - 06
+
+Registering the user 
