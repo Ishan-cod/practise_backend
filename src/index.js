@@ -8,8 +8,8 @@ dotenv.config({
 })
 
 
-// This is a promise.
 
+// This is a promise...
 connectDB()
 .then(() => {
     app.listen(process.env.PORT || 3000, () => {
@@ -20,4 +20,4 @@ connectDB()
 .catch((error) => {
     console.log("MONGO DB CONNECTION FAILED !!", error);
     
-})
+}) 

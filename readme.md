@@ -48,3 +48,24 @@ Instead of storing actual video data in the user document, it stores a reference
 
 By default nodejs package...
 1. Used to open a file , change file settings
+
+
+# PART - 05
+1. Installed a package --> "npm i mongoose-aggregate-paginate-v2"
+
+For writting Mongoose aggregation pipeline...
+
+2. Installed another package --> "npm i bcrypt"
+
+For encrypting password and decrypting it --> it used cryptography for this purpose.
+
+3. Another package installed to create tokens --> JSON web token (JWT)
+
+It is also based on cryptography.
+
+<div>
+WHAT IS JWT ?
+
+JWT is a bearer token ... all those who has this token will have access to my database ... like a key
+
+</div>
