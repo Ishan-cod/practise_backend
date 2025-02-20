@@ -75,3 +75,8 @@ JWT is a bearer token ... all those who has this token will have access to my da
 # PART - 06
 
 Registering the user 
+
+
+
+
+<!-- Token not recieving in middleware need to fix this  -->
