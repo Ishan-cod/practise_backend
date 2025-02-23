@@ -242,41 +242,49 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
   }
 });
 
-const changePassword = asyncHandler(async (req, res) =>{
-  const {oldpassword, newPassword} = req.body
+const changePassword = asyncHandler(async (req, res) => {
+  const { oldpassword, newPassword } = req.body;
 
   const user = User.findById(req.user?._id);
-  if(!user) throw new ApiError(400, "User not found");
+  if (!user) throw new ApiError(400, "User not found");
 
-  const passwordCheck = await user.isPasswordCorrect(oldpassword)
+  const passwordCheck = await user.isPasswordCorrect(oldpassword);
 
-  if(!passwordCheck) throw new ApiError(400, "User password is incorrect");
+  if (!passwordCheck) throw new ApiError(400, "User password is incorrect");
 
   user.password = newPassword;
   await user.save({
-    validateBeforeSave : false
-  })
+    validateBeforeSave: false,
+  });
 
   return res
-  .status(200)
-  .json(
-    new ApiResponse(200,{}, " Password changed successfully ")
-  )
-  
-  
-})
+    .status(200)
+    .json(new ApiResponse(200, {}, " Password changed successfully "));
+});
 
-const showloggedInUser = asyncHandler   (async(req, res) => {
-
+const showloggedInUser = asyncHandler(async (req, res) => {
   const user = req.user;
-  if(!user)
-    throw new ApiError(400, "User not found");
 
-  throw new ApiResponse(200, {user}, "User found succesfully")
+  res.status(200).json({
+    status: 200,
+    data: {
+      user,
+    },
+    message: "User found",
+  });
+});
 
 
+const updateAvatar = asyncHandler(async (req, res) => {
+  req.file
 })
 
 
-
-export { logoutUser, loginUser, registerUser, refreshAccessToken, changePassword , showloggedInUser};
+export {
+  logoutUser,
+  loginUser,
+  registerUser,
+  refreshAccessToken,
+  changePassword,
+  showloggedInUser,
+};
